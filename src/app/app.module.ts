@@ -9,6 +9,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ClientesComponent } from './components/clientes/clientes.component';
 import { AboutComponent } from './components/about/about.component';
+import { ClienteService } from './components/clientes/cliente.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { AboutComponent } from './components/about/about.component';
     BrowserAnimationsModule,
     MaterialModule,
   ],
-  providers: [],
+  providers: [ClienteService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
