@@ -8,6 +8,7 @@ import { MaterialModule } from './material/material.module';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ClientesComponent } from './components/clientes/clientes.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ClientesComponent } from './components/clientes/clientes.component';
     HeaderComponent,
     FooterComponent,
     ClientesComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

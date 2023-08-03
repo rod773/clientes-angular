@@ -1,24 +1,51 @@
+<mat-sidenav #sidenav>
+    <mat-nav-list (click)="sidenav.close()">
+        <a mat-list-item routerLink="/">
+            <mat-icon>person_pin</mat-icon>
+            <span>Clientes</span>
+        </a>
+
+        <a mat-list-item routerLink="about">
+            <mat-icon>question_answer</mat-icon>
+            <span>About</span>
+        </a>
+
+        <a mat-list-item>
+            <mat-icon>person_add</mat-icon>
+            <span>Register</span>
+        </a>
+
+        <a mat-list-item>
+            <mat-icon>account_circle</mat-icon>
+            <span>Login</span>
+        </a>
+
+    </mat-nav-list>
+</mat-sidenav>
 <mat-toolbar color="primary">
-    <button mat-icon-button>
+    <button mat-icon-button (click)="sidenav.open()">
         <mat-icon>menu</mat-icon>
     </button>
-    <span>{{titulo}}</span>
 
-    <button mat-button [matMenuTriggerFor]="aboveMenu">Above</button>
-    <mat-menu #aboveMenu="matMenu" yPosition="above">
-        <button mat-menu-item>Item 1</button>
-        <button mat-menu-item>Item 2</button>
+    <a mat-button [matMenuTriggerFor]="dropdown">
+        <span>Screens</span>
+    </a>
+
+    <mat-menu #dropdown>
+        <button mat-menu-item routerLink="/">Courses</button>
+        <button mat-menu-item routerLink="/about">About</button>
     </mat-menu>
 
-    <button mat-button [matMenuTriggerFor]="belowMenu">Below</button>
-    <mat-menu #belowMenu="matMenu" yPosition="below">
-        <button mat-menu-item>Item 1</button>
-        <button mat-menu-item>Item 2</button>
-    </mat-menu>
+    <a mat-button>
+        <mat-icon>person_add</mat-icon>
+        <span>Register</span>
+    </a>
 
-    <button mat-button [matMenuTriggerFor]="beforeMenu">Before</button>
-    <mat-menu #beforeMenu="matMenu" xPosition="before">
-        <button mat-menu-item>Item 1</button>
-        <button mat-menu-item>Item 2</button>
-    </mat-menu>
+    <a mat-button>
+        <mat-icon>account_circle</mat-icon>
+        <span>Login</span>
+    </a>
+
+
+
 </mat-toolbar>
